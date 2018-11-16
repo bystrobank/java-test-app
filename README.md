@@ -1,5 +1,5 @@
-# java-test-app
-Тестовое задание по java
+# Тестовое задание по java
+
 1) форкнуть https://github.com/ilb/jparestresource
 2) Создать базу в mysql сервере (см. schema.sql)
 3) Запустить приложение
@@ -13,3 +13,16 @@
 Написать маппер для User (/jparestresource-web/src/main/java/ru/ilb/jparestresource/mappers/UserMapper.java) (как писать см. http://mapstruct.org/)
 Добавить в xml /jparestresource-web/src/test/resources/test/createDocumentBatchXml.xml двух тестовых user'ов. Один будет относится к первой половине документов, второй - к оставшимся.
 Проверить, запуском скрипта /jparestresource-web/src/test/resources/test/createDocumentBatchXml.sh, что в БД были добавлены эти 2 user'a.
+
+## Установка и подключение Tomcat
+
+Установка вручную: [скачать](http://apache-mirror.rbc.ru/pub/apache/tomcat/tomcat-9/v9.0.13/bin/apache-tomcat-9.0.13.tar.gz) и распаковать.
+
+Подключение: 
+
+Tools - Servers - Add server - Choose Server - Tomcat - Catalina Home - указать каталог с Tomcat. 
+
+Для отладки удобно иметь свою конфигурацию сервера - крыжим Use Private Configuration Folder, 
+указываем на пустой каталог (создать можно прямо из диалога выбора каталога). Заполняем имя и пароль пользователя, например ide и 123, этот пользователь будет использован для управления данным экземпляром Tomcat.
+
+![](tomcat.png)
