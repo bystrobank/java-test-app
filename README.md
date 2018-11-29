@@ -14,6 +14,20 @@
 Добавить в xml /jparestresource-web/src/test/resources/test/createDocumentBatchXml.xml двух тестовых user'ов. Один будет относится к первой половине документов, второй - к оставшимся.
 Проверить, запуском скрипта /jparestresource-web/src/test/resources/test/createDocumentBatchXml.sh, что в БД были добавлены эти 2 user'a.
 
+## Установка и настройка Netbeans
+
+### Установка
+1. [Скачать Netbeans 8.2](https://netbeans.org/downloads/), выбрать "Все" (полную версию)
+2. Распаковать файлы: unzip netbeans-X.Y.Z-YYYYMMDDXXXX.zip -d /opt или в %ProgramFiles%\Netbeans
+
+### Настройка
+
+#### Настройки в файле конфигурации netbeans.conf
+
+На Windows: В строку netbeans_default_options добавить -J-Dfile.encoding=UTF-8 (на linux UTF-8 берется из локали). Так же нужно в переменные среды добавить JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8
+
+Переключаем интерфейс на английский - так привычнее : в netbeans_default_options добавить --locale en_US 
+
 ## Установка и подключение Tomcat
 
 Установка вручную: [скачать](http://apache-mirror.rbc.ru/pub/apache/tomcat/tomcat-9/v9.0.13/bin/apache-tomcat-9.0.13.tar.gz) и распаковать.
