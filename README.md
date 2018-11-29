@@ -40,3 +40,7 @@ Tools - Servers - Add server - Choose Server - Tomcat - Catalina Home - указ
 указываем на пустой каталог (создать можно прямо из диалога выбора каталога). Заполняем имя и пароль пользователя, например ide и 123, этот пользователь будет использован для управления данным экземпляром Tomcat.
 
 ![](tomcat.png)
+
+## Установка Jeddict
+
+[Скачать или установить через Update Center версия 5.2 для netbeans 8.2](https://jeddict.github.io/page.html?l=p/download)
