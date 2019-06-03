@@ -30,7 +30,7 @@
 
 ## Установка и подключение Tomcat
 
-Установка вручную: [скачать](http://apache-mirror.rbc.ru/pub/apache/tomcat/tomcat-9/v9.0.13/bin/apache-tomcat-9.0.13.tar.gz) и распаковать.
+Установка вручную: [скачать](https://tomcat.apache.org/download-90.cgi) и распаковать.
 
 Подключение: 
 
