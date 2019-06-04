@@ -53,3 +53,30 @@ spring.datasource.password=filedossier
             <artifactId>spring-data-jdbc</artifactId>
         </dependency>
 ```
+
+## Настройка NamingStrategy
+
+Для того, чтобы убрать _ в именах таблиц и полей и привести к верхнему регистру, как это делает JPA, нужно настроить NamingStrategy в Application.java
+```java
+    /**
+     * JPA-like NamingStrategy
+     * @return
+     */
+    @Bean
+    public NamingStrategy namingStrategy() {
+        return new NamingStrategy() {
+            @Override
+            public String getColumnName(RelationalPersistentProperty property) {
+                Assert.notNull(property, "Property must not be null.");
+                return property.getName().toUpperCase();
+            }
+
+            @Override
+            public String getTableName(Class<?> type) {
+                Assert.notNull(type, "Type must not be null.");
+                return type.getSimpleName().toUpperCase();
+            }
+
+        };
+    }
+```
