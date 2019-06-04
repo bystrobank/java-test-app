@@ -32,6 +32,14 @@ spring.datasource.url=jdbc:mysql://localhost:3306/filedossier?serverTimezone=Eur
 spring.datasource.username=filedossier
 spring.datasource.password=filedossier
 ```
+## Логгирование jdbc запросов
+Прописать в logback.xml
+```xml
+    <!-- log JdbcTemplate queries -->
+    <logger name="org.springframework.jdbc.core.JdbcTemplate" level="debug"/>
+    <!-- log JdbcTemplate query parameters -->
+    <logger name="org.springframework.jdbc.core.StatementCreatorUtils" level="trace"/>
+```
 
 ## Настройка jdbc зависимостей
 Добавить в pom.xml
