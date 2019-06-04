@@ -37,7 +37,7 @@ spring.datasource.username=filedossier
 spring.datasource.password=filedossier
 ```
 ### Логгирование jdbc запросов
-Прописать в logback.xml
+При необходимости отладки генерируемых JDBC запросов, прописать в logback.xml
 ```xml
     <!-- log JdbcTemplate queries -->
     <logger name="org.springframework.jdbc.core.JdbcTemplate" level="debug"/>
