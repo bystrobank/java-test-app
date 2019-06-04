@@ -28,6 +28,8 @@ spring.datasource.jndi-name=java:comp/env/jdbc/filedossier
 ```
 
 ### Настойка jdbc подключения через appication.properties для тестов
+Создать файл src/test/resources/appication.properties и настроить в нем подключение к тестовой базе данных
+
 ```
 spring.datasource.driver-class-name=com.mysql.jdbc.Driver
 spring.datasource.url=jdbc:mysql://localhost:3306/filedossier?serverTimezone=Europe/Samara&rewriteBatchedStatements=true
