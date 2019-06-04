@@ -1,5 +1,7 @@
-# Настройка подключения к базе данных
-## Настойка jdbc подключения через JNDI
+# Работа с JDBC
+
+## Настройка подключения к базе данных
+### Настойка jdbc подключения через JNDI
 
 В файл WEB_INF/web.xml добавить  ссылку на JNDI ресурс
 ```xml
@@ -25,14 +27,14 @@
 spring.datasource.jndi-name=java:comp/env/jdbc/filedossier
 ```
 
-## Настойка jdbc подключения через appication.properties для тестов
+### Настойка jdbc подключения через appication.properties для тестов
 ```
 spring.datasource.driver-class-name=com.mysql.jdbc.Driver
 spring.datasource.url=jdbc:mysql://localhost:3306/filedossier?serverTimezone=Europe/Samara&rewriteBatchedStatements=true
 spring.datasource.username=filedossier
 spring.datasource.password=filedossier
 ```
-## Логгирование jdbc запросов
+### Логгирование jdbc запросов
 Прописать в logback.xml
 ```xml
     <!-- log JdbcTemplate queries -->
@@ -41,7 +43,7 @@ spring.datasource.password=filedossier
     <logger name="org.springframework.jdbc.core.StatementCreatorUtils" level="trace"/>
 ```
 
-## Настройка jdbc зависимостей
+### Настройка jdbc зависимостей
 Добавить в pom.xml
 ```xml
         <dependency>
@@ -54,7 +56,7 @@ spring.datasource.password=filedossier
         </dependency>
 ```
 
-## Настройка NamingStrategy
+### Настройка NamingStrategy
 
 Для того, чтобы убрать _ в именах таблиц и полей и привести к верхнему регистру, как это делает JPA, нужно настроить NamingStrategy в Application.java
 ```java
