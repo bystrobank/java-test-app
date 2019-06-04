@@ -84,3 +84,54 @@ spring.datasource.password=filedossier
         };
     }
 ```
+## Модель данных
+
+### Создание сущностей
+В пакете ru.ilb.filedossier.model  создать сущность DossierContext
+```java
+public class DossierContext {
+
+    @Id
+    private Long id;
+    private String dossierKey;
+```
+Сгенерировать Getter/Setter (Alt-Ins -> Getter and Setter, выбрать все поля)
+
+### Создание репозитория
+
+В пакете ru.ilb.filedossier.repositories создать репозиторий
+
+```java
+public interface DossierContextRepository extends CrudRepository<DossierContext, Long> {}
+```
+
+### Создание теста
+
+Контекстное меню на файле DossierContextRepository -> Tools-> Create/Update tests, OK.
+
+Пример теста
+```java
+@RunWith(SpringRunner.class)
+@Transactional
+@Commit // https://docs.spring.io/spring/docs/5.1.7.RELEASE/spring-framework-reference/testing.html#testcontext-tx-rollback-and-commit-behavior
+@ContextConfiguration(classes = Application.class)
+@SpringBootTest
+public class DossierContextRepositoryTest {
+
+    @Autowired
+    DossierContextRepository dossierContextRepository;
+
+    public DossierContextRepositoryTest() {
+    }
+
+    @Test
+    public void testSomeMethod() {
+        DossierContext dc = new DossierContext();
+        dc.setDossierKey("testkey");
+
+        dc = dossierContextRepository.save(dc);
+        System.out.println("dc.id=" + dc.getId());
+    }
+
+}
+```
