@@ -17,8 +17,9 @@
 ## Установка и настройка Netbeans
 
 ### Установка
-1. [Скачать Netbeans 8.2](https://netbeans.org/downloads/), выбрать "Все" (полную версию)
-2. Распаковать файлы: unzip netbeans-X.Y.Z-YYYYMMDDXXXX.zip -d /opt или в %ProgramFiles%\Netbeans
+Скачать и установить NetBeans https://netbeans.org/
+
+Можно скачать NetBeans с предустановленным jeddict https://jeddict.github.io/page.html?l=p/download
 
 ### Настройка
 
@@ -41,6 +42,3 @@ Tools - Servers - Add server - Choose Server - Tomcat - Catalina Home - указ
 
 ![](tomcat.png)
 
-## Установка Jeddict
-
-[Скачать или установить через Update Center версия 5.2 для netbeans 8.2](https://jeddict.github.io/page.html?l=p/download)
