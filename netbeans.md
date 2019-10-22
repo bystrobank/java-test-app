@@ -5,6 +5,9 @@
 
 Можно скачать NetBeans с предустановленным jeddict https://jeddict.github.io/page.html?l=p/download
 
+*!ВАЖНО!* Jeddict 5.3 не подходит из-за бага https://github.com/jeddict/jeddict/issues/339
+Пока не вышел Jeddict 6.0, нужно использовать Netbeans 10 и Jedict 5.2!
+
 ## Настройка
 
 #### Настройки в файле конфигурации netbeans.conf
