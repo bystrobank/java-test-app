@@ -1,12 +1,10 @@
 # Установка и настройка Netbeans
 
 ## Установка
-Скачать и установить NetBeans https://netbeans.org/
 
-Можно скачать NetBeans с предустановленным jeddict https://jeddict.github.io/page.html?l=p/download
-
-*!ВАЖНО!* Jeddict 5.3 не подходит из-за бага https://github.com/jeddict/jeddict/issues/339
-Пока не вышел Jeddict 6.0, нужно использовать Netbeans 10 и Jedict 5.2!
+1. Скачать и установить NetBeans https://netbeans.org/
+2. Tools->Plugins->Settings добавить Jeddict (https://jeddict.github.io/page.html?l=p/download)
+3. Tools->Plugins->Available ввести в поиск jeddict, отметить все плагины (~22 шт), установить.
 
 ## Настройка
 
